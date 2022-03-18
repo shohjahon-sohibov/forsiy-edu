@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "groupName": "Backend N10",
+    "description": "doing 2"
+  },
+  {
+    "id": 3,
+    "groupName": "Arabic N10",
+    "description": "arabic homework"
+  },
+  {
+    "id": 3,
+    "groupName": "Frontend N10",
+    "description": "doing"
+  },
+  {
+    "id": 4,
+    "groupName": "Backend N10",
+    "description": "doing 2"
+  }
+]

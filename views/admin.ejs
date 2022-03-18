@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <section class="container">
+        <header class="header">
+          <div class="header__wrapper">
+            <h1 class="header__site-name">Umar Al-Forsiy</h1>
+            <p class="header__slogan">Islamic evolution center</p>
+          </div>
+        </header>
+
+        <main class="main">
+          <div class="main__wrapper">
+
+            <!-- buttons -->
+
+            <div class="main-wrapper__buttons">
+              <div class="btn-group-vertical">
+                <button id="courseBtn" type="button" class="btn">
+                  Courses
+                </button>
+                <button id="groupBtn" type="button" class="btn">Groups</button>
+                <button id="teacherBtn" type="button" class="btn">
+                  Teachers
+                </button>
+                <button id="studentBtn" type="button" class="btn">
+                  Students
+                </button>
+              </div>
+            </div>
+
+            <div class="main-wrapper__center-data">
+              <div class="main-wrapper__top">
+                <header class="center-data__header">
+                  <h2 class="center-data-header__title">My Data</h2>
+                </header>
+
+                <!-- ============
+                offCanvases right
+                ========== -->
+
+                <!-- offCanvas Teacher -->
+
+                <div>
+                  <div
+                    class="offcanvas offcanvas-end offCanvasBtnJs"
+                    tabindex="-1"
+                    id="teacher"
+                    aria-labelledby="offcanvasRightLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <button
+                        type="button"
+                        class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <form
+                        action="/formTeacher"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded"
+                      >
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Name</label
+                          >
+                          <input
+                            name="name"
+                            type="text"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Number</label
+                          >
+                          <input
+                            name="phone"
+                            type="number"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            name="password"
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+
+                        <div class="radio-wrapper">
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="male"
+                            />
+                            <label class="form-check-label" for="inlineRadio1"
+                              >Male</label
+                            >
+                          </div>
+
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="female"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >Female</label
+                            >
+                          </div>
+                        </div>
+
+                        <label class="mt-3" for="">Choose Course</label>
+                        <select
+                          name="select"
+                          class="form-select teacher-select-js"
+                          aria-label="Default select example"
+                        >
+                          <% for(let course of allCourses) { %>
+                          <option value="<%= course.name  %>">
+                            <%= course.name %>
+                          </option>
+                          <% } %>
+                        </select>
+
+                        <button type="submit" class="mt-4 btn btn-primary">
+                          Submit
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- offCanvas student -->
+
+                <div>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="student"
+                    aria-labelledby="offcanvasRightLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <button
+                        type="button"
+                        class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <form
+                        action="/formStudent"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded"
+                      >
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Name</label
+                          >
+                          <input
+                            name="name"
+                            type="text"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Number</label
+                          >
+                          <input
+                            name="phone"
+                            type="number"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            name="password"
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+
+                        <div class="radio-wrapper">
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="male"
+                            />
+                            <label class="form-check-label" for="inlineRadio1"
+                              >Male</label
+                            >
+                          </div>
+
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="female"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >Female</label
+                            >
+                          </div>
+                        </div>
+
+                        <label class="mt-3" for="">Choose Course</label>
+                        <select
+                          name="selectCourse"
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <% for(let course of allCourses) { %>
+                          <option value="<%= course.name %>">
+                            <%= course.name %>
+                          </option>
+                          <% } %>
+                        </select>
+
+                        <button type="submit" class="mt-4 btn btn-primary">
+                          Submit
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Groups offCanvas -->
+
+                <div>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="group"
+                    aria-labelledby="offcanvasRightLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <button
+                        type="button"
+                        class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <form
+                        action="/formGoup"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded"
+                      >
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Group name</label
+                          >
+                          <input
+                            name="groupName"
+                            type="text"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+
+                        <label class="mt-3" for="">Choose Course</label>
+                        <select
+                          name="selectCourse"
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <% for(let course of allCourses) { %>
+                          <option value="<%= course.name %>">
+                            <%= course.name %>
+                          </option>
+                          <% } %>
+                        </select>
+
+                        <label class="mt-3" for="">Choose Teacher</label>
+                        <select
+                          name="selectTeacher"
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <% const foundTeacher = allUsers.filter(e => e.role ==
+                          'teacher') %> <% for(let teacher of foundTeacher) { %>
+                          <option value="<%= teacher.username %>">
+                            <%= teacher.username %>
+                          </option>
+                          <% } %>
+                        </select>
+
+                        <button type="submit" class="mt-4 btn btn-primary">
+                          Submit
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Course offCanvas -->
+
+                <div>
+                  <button
+                    id="offCanvasBtnJs"
+                    class="btn border-dark"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target=""
+                    aria-controls=""
+                  >
+                    New
+                  </button>
+
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="course"
+                    aria-labelledby="offcanvasRightLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <button
+                        type="button"
+                        class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <form
+                        action="/formCourse"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded"
+                      >
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Course name</label
+                          >
+                          <input
+                            name="courseName"
+                            type="text"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+
+                        <label for="">Description</label>
+                        <textarea
+                          name="description"
+                          class="textarea"
+                          cols="30"
+                          rows="2"
+                        >
+                        </textarea>
+
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Course Price</label
+                          >
+                          <input
+                            name="coursePrice"
+                            type="number"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            placeholder="Course Price"
+                          />
+                        </div>
+
+                        <button type="submit" class="mt-4 btn btn-primary">
+                          Submit
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-wrapper__body center-body">
+                <div class="center-body__list-wrapper">
+                  <ul class="center-body__list teacher-list list">
+                    <div class="center-body__top">
+                      <div class="center-body__id">
+                        <h3>Course</h3>
+                      </div>
+                      <div class="center-body__id">
+                        <h3>Name</h3>
+                      </div>
+                      <div class="center-body__id">
+                        <h3>phone</h3>
+                      </div>
+                    </div>
+
+                    <% const filteredTeachers = allUsers.filter(e => e.role ==
+                    'teacher') %> <% for (let user of filteredTeachers ) { %>
+
+                    <li class="center-body__item">
+                      <h4 class="item__heading"><%= user.course %></h4>
+                      <h4 class="item__heading"><%= user.username %></h4>
+                      <h4 class="item__heading"><%= user.phoneNumber %></h4>
+                    </li>
+
+                    <% } %>
+                  </ul>
+
+                  <ul class="center-body__list student-list list">
+                    <div class="center-body__top">
+                      <div class="center-body__id">
+                        <h3>Course</h3>
+                      </div>
+                      <div class="center-body__id">
+                        <h3>Name</h3>
+                      </div>
+                      <div class="center-body__id">
+                        <h3>phone</h3>
+                      </div>
+                    </div>
+
+                    <% const filteredStudents = allUsers.filter(e => e.role ==
+                    'student') %> <% for (let user of filteredStudents ) { %>
+
+                    <li class="center-body__item">
+                      <h4 class="item__heading"><%= user.course %></h4>
+                      <h4 class="item__heading"><%= user.username %></h4>
+                      <h4 class="item__heading"><%= user.phoneNumber %></h4>
+                    </li>
+
+                    <% } %>
+                  </ul>
+
+                  <ul class="center-body__list group-list list">
+                    <div class="center-body__top">
+                      <div class="center-body__id">
+                        <h3>Group name</h3>
+                      </div>
+                      <div class="center-body__id">
+                        <h3>Teacher name</h3>
+                      </div>
+                      <div class="center-body__id">
+                        <h3>course name</h3>
+                      </div>
+                    </div>
+
+                    <% for (let group of allGroups ) { %>
+                    <li class="center-body__item">
+                      <h4 class="item__heading"><%= group.groupName %></h4>
+                      <h4 class="item__heading"><%= group.teacherName %></h4>
+                      <h4 class="item__heading"><%= group.courseName %></h4>
+                    </li>
+                    <% } %>
+                  </ul>
+
+                  <ul class="center-body__list course-list list card_list">
+
+                    <% for (let course of allCourses ) { %>
+                    <li class="center-body__item card">
+                      <div class="card__name">
+                        <h4><%= course.name %></h4>
+                        <h4><%= course.price %></h4>
+                      </div>
+                      <div class="card__description">
+                        <h4>
+                          <%= course.description %>
+                        </h4>
+                      </div>
+                    </li>
+                    <% } %>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </section>
+
+    <script src="/assets/js/admin.js"></script>
+  </body>
+</html>

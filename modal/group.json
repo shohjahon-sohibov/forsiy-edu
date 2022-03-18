@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "groupName": "Backend N10",
+    "teacherName": "Ali",
+    "courseName": "backend"
+  },
+  {
+    "id": 2,
+    "groupName": "Frontend N10",
+    "teacherName": "Usmon",
+    "courseName": "frontend"
+  },  {
+    "id": 2,
+    "groupName": "Backend N10",
+    "teacherName": "Usmon",
+    "courseName": "frontend"
+  },
+  {
+    "id": 3,
+    "groupName": "Arabic N10",
+    "teacherName": "ikrom",
+    "courseName": "arabic"
+  },
+  {
+    "id": 4,
+    "groupName": "Russian N10",
+    "teacherName": "ikrom",
+    "courseName": "russian"
+  },
+  {
+    "id": 4,
+    "groupName": "Russian N10",
+    "teacherName": "ikrom",
+    "courseName": "russian"
+  }
+]

@@ -1,0 +1,144 @@
+.header {
+  border-bottom: 2px solid #000;
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.header__wrapper {
+  width: 300px;
+}
+
+.header__site-name {
+  color: green;
+  padding: 0;
+  margin: 0;
+}
+
+.header__slogan {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.main {
+  padding: 20px;
+  padding-top: 0;
+  height: 100vh;
+}
+
+.main__wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.main-wrapper__buttons {
+  padding-right: 50px;
+  border-right: 1px solid black;
+}
+
+.main-wrapper__center-data {
+  width: 100%;
+  padding: 20px 40px;
+  
+}
+
+.main-wrapper__top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding-bottom: 30px;
+}
+
+.center-data-header__title {
+  
+}
+
+.main-wrapper__body {
+  
+}
+
+.center-body__top {
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 127, 80, 0.596);
+  color: black;
+  border-radius: 8px;
+}
+
+.center-body__list-wrapper {
+  
+}
+
+.center-body__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+.center-body__item {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 127, 80, 0.253);
+  color: black;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.btn {
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.radio-wrapper {
+  display: block;
+}
+
+.textarea {
+  width: 100%;
+}
+
+.list {
+  display: none;
+}
+
+.teacher__student-list, .teacher__group-list {
+  display: none;
+}
+
+.card-list {
+}
+
+.card {
+  padding-left: 100px;
+  margin-top: 10px;
+  width: 80%;
+}
+
+.card__name {
+  margin-right: auto;
+}
+
+.card__description {
+  margin: 0;
+  padding: 0;
+}
+
+.item__heading {
+  width: 140px;
+}
+
+.show {
+  display: block;
+}
+
+.card__description {
+  margin-right: auto;
+}

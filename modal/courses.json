@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "backend",
+    "description": "something",
+    "price": "700 000 sum"
+  },
+  {
+    "id": 2,
+    "name": "frontend",
+    "description": "something",
+    "price": "701 999 sum"
+  },
+  {
+    "id": 3,
+    "name": "arabic",
+    "description": "something",
+    "price": "1000000 sum"
+  },
+  {
+    "id": 4,
+    "name": "russian",
+    "description": "this is new method russian course!",
+    "price": "300000 sum"
+  }
+]

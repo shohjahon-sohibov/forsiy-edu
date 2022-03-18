@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "username": "Umar",
+    "password": "1",
+    "role": "admin",
+    "phoneNumber": "+99846872642",
+    "gender": "male"
+  },
+  {
+    "id": 2,
+    "username": "Usmon",
+    "password": "teacher",
+    "role": "teacher",
+    "phoneNumber": "99846872642",
+    "gender": "male",
+    "course": "backend"
+  },
+  {
+    "id": 3,
+    "username": "Ali",
+    "password": "teacher",
+    "role": "teacher",
+    "phoneNumber": "99846872642",
+    "gender": "male",
+    "course": "frontend"
+  },
+  {
+    "id": 4,
+    "username": "abdushukur",
+    "password": "teacher",
+    "role": "teacher",
+    "phoneNumber": "99846872642",
+    "gender": "male",
+    "course": "arabic"
+  },
+  {
+    "id": 5,
+    "username": "samandar",
+    "password": "student",
+    "role": "student",
+    "phoneNumber": "99846872642",
+    "gender": "male",
+    "course": "backend"
+  },
+  {
+    "id": 6,
+    "username": "aziz",
+    "password": "student",
+    "role": "student",
+    "phoneNumber": "99846872642",
+    "gender": "male",
+    "course": "frontend"
+  },
+  {
+    "id": 7,
+    "username": "ali",
+    "password": "student",
+    "role": "student",
+    "phoneNumber": "99846872642",
+    "gender": "male",
+    "course": "arabic"
+  },
+  {
+    "id": 8,
+    "username": "Abdulloh",
+    "phoneNumber": "3232",
+    "password": "31",
+    "role": "student",
+    "gender": "male",
+    "course": "frontend"
+  },
+  {
+    "id": 9,
+    "username": "salmon",
+    "phoneNumber": "99899123454",
+    "password": "232",
+    "role": "student",
+    "gender": "male",
+    "course": "russian"
+  },
+  {
+    "id": 10,
+    "username": "abdurrahman",
+    "phoneNumber": "429491242",
+    "password": "1234",
+    "role": "student",
+    "gender": "male",
+    "course": "arabic"
+  },
+  {
+    "id": 11,
+    "username": "ikrom",
+    "phoneNumber": "32435454667",
+    "password": "1233",
+    "role": "teacher",
+    "gender": "male",
+    "course": "russian"
+  }
+]
